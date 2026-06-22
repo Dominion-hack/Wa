@@ -7,6 +7,10 @@ const { Server } = require("socket.io");
 const app = express();
 const server = http.createServer(app);
 
+app.get("/", (req, res) => {
+  res.send("NEXEORA BACKEND RUNNING 🚀");
+});
+
 app.use(cors());
 app.use(express.json());
 
