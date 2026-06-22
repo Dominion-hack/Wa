@@ -67,6 +67,13 @@ app.post("/verify-otp", (req, res) => {
   res.json({ success: false });
 });
 
+app.get("/api/test", (req, res) => {
+  res.json({
+    success: true,
+    message: "NEXEORA backend connected"
+  });
+});
+
 // SOCKET CHAT
 io.on("connection", (socket) => {
   console.log("User connected");
